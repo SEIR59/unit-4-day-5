@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>All Finches</h1>
+{% for finch in finches %}
+<div class="card">
+    <!-- add this single line below -->
+    <a href="/finches/finchdetail/{{ finch.id }}">
+      <div class="card-content">
+        <span class="card-title">{{ finch.name }}</span>
+        <p>Breed: {{ finch.breed }}</p>
+        {% if finch.age > 1 %}
+          <p>Age: {{ finch.age }}</p>
+        {% else %}
+          <p>Age: Little Baby Bird</p>
+        {% endif %}
+      </div>
+    <!-- and this following one as well -->
+    </a>
+  </div>
+{% endfor %}
+
+{% endblock %}
