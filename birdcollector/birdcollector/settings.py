@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'birdcollector.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'birdcollector',
+        'NAME': 'birdcollector2',
     }
 }
 
