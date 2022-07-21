@@ -20,18 +20,6 @@ class Toy(models.Model):
       return reverse('toys_detail', kwargs={'pk': self.id})
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 class Bird(models.Model):
   name = models.CharField(max_length=100)
   breed = models.CharField(max_length=100)
