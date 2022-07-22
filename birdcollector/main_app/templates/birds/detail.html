@@ -13,7 +13,7 @@
         {% if bird.age > 0 %}
         <p>Age: {{ bird.age }}</p>
         {% else %}
-        <p>Age: </p>
+        <p>Age: Hatchling</p>
         {% endif %}
       </div>
       <div class="card-action">
@@ -37,14 +37,14 @@
   <table class="striped">
     <thead>
       <tr>
-        <th>birde</th>
+        <th>Date</th>
         <th>Meal</th>
       </tr>
     </thead>
     <tbody>
       {% for feeding in bird.feeding_set.all %}
       <tr>
-        <td>{{feeding.birde}}</td>
+        <td>{{feeding.date}}</td>
         <td>{{feeding.get_meal_display}}</td>
       </tr>
       {% endfor %}
